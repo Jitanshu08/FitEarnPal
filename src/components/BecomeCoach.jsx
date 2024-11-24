@@ -19,7 +19,7 @@ const BecomeCoach = () => {
         <div className="become-coach__cta">
           {/* App Store Button */}
           <a
-            href="https://www.apple.com/app-store/"
+            href="https://apps.apple.com/in/app/fitnearn-exercise-earn-enjoy/id6476557022"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -36,7 +36,7 @@ const BecomeCoach = () => {
 
           {/* Play Store Button */}
           <a
-            href="https://play.google.com/store"
+            href="https://play.google.com/store/apps/details?id=com.fitearn.meditate&pcampaignid=web_share"
             target="_blank"
             rel="noopener noreferrer"
           >

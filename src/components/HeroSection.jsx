@@ -28,7 +28,7 @@ const HeroSection = () => {
         </p>
         <div className="hero__cta">
           <a
-            href="https://www.apple.com/app-store/"
+            href="https://apps.apple.com/in/app/fitnearn-exercise-earn-enjoy/id6476557022"
             target="_blank"
             rel="noopener noreferrer"
             className="hero__cta-link"
@@ -36,13 +36,15 @@ const HeroSection = () => {
             <button className="hero__cta-btn app-store">
               <img src={apple} alt="Apple Logo" />
               <div>
-                <span className="hero__cta-btn-small-text">Download on the</span>
+                <span className="hero__cta-btn-small-text">
+                  Download on the
+                </span>
                 <span className="hero__cta-btn-large-text">App Store</span>
               </div>
             </button>
           </a>
           <a
-            href="https://play.google.com/store"
+            href="https://play.google.com/store/apps/details?id=com.fitearn.meditate&pcampaignid=web_share"
             target="_blank"
             rel="noopener noreferrer"
             className="hero__cta-link"
