@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../css/Testimonials.css";
-import coachMain from "../assets/coachMain.png"; // Main central coach
+import coachMain from "../assets/coachMain.png";
 import coach1 from "../assets/coach1.png";
 import coach2 from "../assets/coach1.png";
 import coach3 from "../assets/coach1.png";
@@ -8,7 +8,50 @@ import coach4 from "../assets/coach1.png";
 import coach5 from "../assets/coach1.png";
 import coach6 from "../assets/coach1.png";
 
+const testimonialsData = [
+  {
+    text: "After joining FitnEarnPal, my audience reach has increased and I can work according to my time, which I liked the most.",
+    name: "John Doe",
+    role: "Yoga Trainer",
+    stars: 5,
+  },
+  {
+    text: "FitnEarnPal gave me a platform to share my fitness journey and help others achieve their goals.",
+    name: "Jane Smith",
+    role: "Fitness Coach",
+    stars: 4,
+  },
+  {
+    text: "The ability to conduct live sessions and write blogs has made me connect better with my audience.",
+    name: "Mark Johnson",
+    role: "Meditation Trainer",
+    stars: 5,
+  },
+];
+
+const coachComments = [
+  "Best decision to join FitnEarnPal!",
+  "I’ve improved my audience reach greatly!",
+  "Now I can work on my schedule. Love it!",
+  "Highly recommended for any fitness coach!",
+  "Incredible platform for yoga professionals.",
+  "Amazing tools to manage live sessions!",
+];
+
+const coachImages = [coach1, coach2, coach3, coach4, coach5, coach6];
+
 const Testimonials = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  // Auto-scroll functionality for the main testimonial
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
+    }, 5000); // Change every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="testimonials">
       <h2 className="testimonials__title">
@@ -20,34 +63,57 @@ const Testimonials = () => {
       </p>
       <div className="testimonials__container">
         {/* Surrounding Coaches */}
-        <img src={coach1} alt="Coach 1" className="testimonial__avatar top-left" />
-        <img src={coach2} alt="Coach 2" className="testimonial__avatar middle-left" />
-        <img src={coach3} alt="Coach 3" className="testimonial__avatar bottom-left" />
-        <img src={coach4} alt="Coach 4" className="testimonial__avatar top-right" />
-        <img src={coach5} alt="Coach 5" className="testimonial__avatar middle-right" />
-        <img src={coach6} alt="Coach 6" className="testimonial__avatar bottom-right" />
+        {coachImages.map((coach, index) => (
+          <div
+            key={index}
+            className={`testimonial__avatar-container ${
+              hoveredIndex === index ? "hovered" : ""
+            }`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <img
+              src={coach}
+              alt={`Coach ${index + 1}`}
+              className="testimonial__avatar"
+            />
+            {hoveredIndex === index && (
+              <div className="testimonial__comment">{coachComments[index]}</div>
+            )}
+          </div>
+        ))}
 
         {/* Main Central Testimonial */}
         <div className="testimonial__main">
-        <div className="testimonial__rating">
-            {"★".repeat(5)} {/* Static 5-star rating */}
+          <div className="testimonial__rating">
+            {"★".repeat(testimonialsData[activeIndex].stars)}
+            {"☆".repeat(5 - testimonialsData[activeIndex].stars)}
           </div>
           <p className="testimonial__text">
-            After joining FitnEarnPal my audience reach has increased and I can
-            work according to my time which I liked the most.
+            {testimonialsData[activeIndex].text}
           </p>
-          <img src={coachMain} alt="Central Coach" className="testimonial__main-avatar" />
-          
-          <p className="testimonial__name">Coach Name</p>
-          <p className="testimonial__role">Yoga Trainer</p>
+          <img
+            src={coachMain}
+            alt="Central Coach"
+            className="testimonial__main-avatar"
+          />
+          <p className="testimonial__name">
+            {testimonialsData[activeIndex].name}
+          </p>
+          <p className="testimonial__role">
+            {testimonialsData[activeIndex].role}
+          </p>
         </div>
       </div>
 
       {/* Carousel Dots */}
       <div className="testimonials__dots">
-        <span className="dot active"></span>
-        <span className="dot"></span>
-        <span className="dot"></span>
+        {testimonialsData.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === activeIndex ? "active" : ""}`}
+          ></span>
+        ))}
       </div>
     </section>
   );
