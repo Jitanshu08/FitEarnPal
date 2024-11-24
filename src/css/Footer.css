@@ -26,11 +26,11 @@
 }
 
 .footer__logo {
-  width: 50px; /* Updated for smaller logo size */
+  width: 50px; 
 }
 
 .footer__title {
-  font-size: 32px; /* Updated font size */
+  font-size: 32px; 
   font-weight: bold;
   background: linear-gradient(116.79deg, #DB2777 -10.97%, #F97316 114.58%);
   -webkit-background-clip: text;

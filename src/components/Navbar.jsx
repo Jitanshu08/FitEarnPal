@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/FitEarn.png"; // Updated logo file path
+import logo from "../assets/FitEarn.png"; 
 import "../css/Navbar.css";
 
 const Navbar = () => {
@@ -7,7 +7,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="navbar__logo">
         <img src={logo} alt="FitnEarnPal Logo" />
-        <span className="navbar__title">FitnEarnPal</span> {/* Added title */}
+        <span className="navbar__title">FitnEarnPal</span> 
       </div>
       <nav className="navbar__links">
         <a href="#home">Home</a>

@@ -17,8 +17,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  overflow: hidden; /* Prevents text from overflowing out of the container */
-  text-overflow: ellipsis; /* Optional: Adds ellipsis if text overflows */
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 
 
@@ -28,11 +28,11 @@
 }
 
 .hero__title {
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+  font-size: clamp(2rem, 5vw, 3.5rem); 
   color: #fff;
   margin: 0;
   font-style: italic;
-  white-space: nowrap; /* Prevent wrapping of text */
+  white-space: nowrap; 
 }
 
 

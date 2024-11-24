@@ -52,7 +52,7 @@
 }
 
 .how-it-works__step:last-child .how-it-works__line {
-  display: none; /* Hide the line after the last step */
+  display: none; 
 }
 
 .how-it-works__step-title {

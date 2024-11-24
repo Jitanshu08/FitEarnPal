@@ -3,16 +3,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.98); 
+  backdrop-filter: blur(100px); 
   top: 0;
   z-index: 1000;
 }
 
-/* Updated logo and title */
+
+/*logo and title */
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between logo and title */
+  gap: 10px; 
 }
 
 .navbar__logo img {
@@ -20,7 +22,7 @@
 }
 
 .navbar__title {
-  font-size: 40px; /* Updated font size */
+  font-size: 40px; 
   font-weight: bold;
   background: linear-gradient(116.79deg, #DB2777 -10.97%, #F97316 114.58%);
   -webkit-background-clip: text;
@@ -41,33 +43,33 @@
   transition: color 0.3s ease;
 }
 
-/* Updated signup button */
+/* signup button */
 .navbar__cta .navbar__signup {
   position: relative;
   padding: 10px 20px;
-  background: transparent; /* No background color */
-  color: rgba(245, 245, 245, 1); /* Updated font color */
+  background: transparent; 
+  color: rgba(245, 245, 245, 1); 
   font-weight: 600;
   cursor: pointer;
-  border: none; /* Remove the default border */
-  border-radius: 25px; /* Curvy edges for the button */
-  overflow: hidden; /* Ensures the gradient stays within the border */
+  border: none; 
+  border-radius: 25px; 
+  overflow: hidden; 
 }
 
 .navbar__cta .navbar__signup:before {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px; /* Thickness of the border */
+  padding: 2px; 
   background: linear-gradient(126.89deg, #DB2777 -67.19%, #F97316 203.32%);
-  border-radius: 25px; /* Match the button's border-radius */
+  border-radius: 25px; 
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0); /* Mask the inside */
-  -webkit-mask-composite: destination-out; /* Ensures only border is visible */
+    linear-gradient(#fff 0 0); 
+  -webkit-mask-composite: destination-out; 
   mask-composite: exclude;
 }
 
 .navbar__cta .navbar__signup:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+  background-color: rgba(255, 255, 255, 0.1); 
 }

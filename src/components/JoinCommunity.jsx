@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; // Correctly imported hooks
+import React, { useState, useEffect } from "react"; 
 import "../css/JoinCommunity.css";
 
 const JoinCommunity = () => {
