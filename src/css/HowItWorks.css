@@ -1,0 +1,67 @@
+.how-it-works {
+  padding: 60px 40px;
+  background: linear-gradient(126.89deg, rgb(25, 13, 2) -67.19%, rgba(75, 34, 53, 0.86) 203.32%);
+  color: #fff;
+  text-align: center;
+}
+
+.how-it-works__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.how-it-works__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.how-it-works__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.how-it-works__step {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.how-it-works__icon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-it-works__icon {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.how-it-works__line {
+  width: 173px;
+  height: 2px;
+  background: linear-gradient(126.89deg, #DB2777 -67.19%, #F97316 203.32%);
+
+  position: absolute;
+  top: 36%;
+  left: calc(58% + 10px);
+}
+
+.how-it-works__step:last-child .how-it-works__line {
+  display: none; /* Hide the line after the last step */
+}
+
+.how-it-works__step-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.how-it-works__step span {
+  font-size: 1rem;
+  color: #ccc;
+}

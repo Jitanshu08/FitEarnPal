@@ -1,0 +1,30 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+
+.app__hero,
+.app__features,
+.app__how-it-works {
+  padding: 50px 20px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app__hero h1,
+.app__features h1,
+.app__how-it-works h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.app__hero p,
+.app__features p,
+.app__how-it-works p {
+  font-size: 1.2rem;
+  color: #555;
+}

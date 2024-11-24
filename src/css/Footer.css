@@ -1,0 +1,148 @@
+.footer {
+  background: linear-gradient(126.89deg, rgb(25, 13, 2) -67.19%, rgba(75, 34, 53, 0.86) 203.32%);
+  color: #fff;
+  padding: 50px 40px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer__logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer__logo {
+  width: 50px; /* Updated for smaller logo size */
+}
+
+.footer__title {
+  font-size: 32px; /* Updated font size */
+  font-weight: bold;
+  background: linear-gradient(116.79deg, #DB2777 -10.97%, #F97316 114.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.footer__description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__socials a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer__socials img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.footer__socials img:hover {
+  transform: scale(1.1);
+}
+
+.footer__section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links li {
+  margin-bottom: 10px;
+}
+
+.footer__links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__links a:hover {
+  color: #ffffff;
+}
+
+.footer__downloads .hero__cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background: linear-gradient(126.89deg, #db2777 -67.19%, #f97316 203.32%);
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 200px;
+}
+
+.footer__downloads .hero__cta-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__downloads .hero__cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__bottom p {
+  margin: 0;
+}
+
+.footer__left {
+  text-align: left;
+}
+
+.footer__center {
+  text-align: center;
+}
+
+.footer__right {
+  text-align: right;
+}

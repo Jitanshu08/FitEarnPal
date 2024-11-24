@@ -1,0 +1,113 @@
+.become-coach {
+  padding: 60px 40px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.become-coach__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.become-coach__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.become-coach__title span {
+  background: linear-gradient(109.8deg, #DB2777 43.75%, #DA5F09 73.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+/* Container for overlapping phones */
+.become-coach__phones {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  left: -70px;
+}
+
+/* Phone Images */
+.become-coach__phone {
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Phone One (Bottom Layer) */
+.become-coach__phone:first-child {
+  z-index: 1;
+  width: 300px;
+  transform: rotate(-10deg) translate(-130px, 30px);
+}
+
+/* Phone Two (Top Layer) */
+.become-coach__phone:nth-child(2) {
+  z-index: 2;
+  width: 390px;
+  transform: rotate(10deg) translate(50px, 40px);
+}
+
+/* Hover effect for phones */
+.become-coach__phone:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); */
+}
+
+/* Call-to-action buttons */
+.become-coach__cta {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.hero__cta-btn {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(126.89deg, #db2777 -67.19%, #f97316 203.32%);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero__cta-btn div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__cta-btn-small-text {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.hero__cta-btn-large-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.hero__cta-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.hero__cta-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(126.89deg, #f97316 -67.19%, #db2777 203.32%);
+}
